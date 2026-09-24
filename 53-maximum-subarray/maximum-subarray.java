@@ -1,17 +1,16 @@
 class Solution {
-    public int maxSubArray(int[] nums) {int maxSum = nums[0];
-        int currentSum = nums[0];
-
-        for (int i = 1; i < nums.length; i++) {
-            // Decide whether to add current element to the existing subarray 
-            // or start a new subarray from the current element
-            currentSum = Math.max(nums[i], currentSum + nums[i]);
-            
-            // Keep track of the overall maximum sum found so far
-            maxSum = Math.max(maxSum, currentSum);
-        }
-
-        return maxSum;
+    public int maxSubArray(int[] nums) {
+         
+         int n = nums.length;
+         int sum=0;
+         int max =  Integer.MIN_VALUE;
+         for(int val:nums){
+            sum+=val;
+            max=Math.max(max,sum);
+            if(sum<0){
+                sum =0;
+            }
+         }
+         return max;
     }
 }
-      
