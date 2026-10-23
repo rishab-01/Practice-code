@@ -52,8 +52,7 @@ class Solution {
             }
         }
 
-        // Determine initial state of nums
-        // Let's check which (type, shift) matches nums
+       
         int startType = -1, startShift = -1;
         for (int t = 0; t < 2; t++) {
             for (int s = 0; s < n; s++) {
