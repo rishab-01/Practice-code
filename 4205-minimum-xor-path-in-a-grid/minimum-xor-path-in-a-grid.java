@@ -4,7 +4,6 @@ class Solution {
         int m = grid.length;
         int n = grid[0].length;
 
-        // XOR values range from 0 to 1023
         boolean[][][] dp = new boolean[m][n][1024];
 
         dp[0][0][grid[0][0]] = true;
