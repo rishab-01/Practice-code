@@ -13,17 +13,17 @@ class Solution {
             int mid = low + (high - low) / 2;
             
             if (canPlace(position, m, mid)) {
-                ans = mid;       // Valid distance found, try a larger force
+                ans = mid;     
                 low = mid + 1;
             } else {
-                high = mid - 1;  // Force is too large, reduce the distance
+                high = mid - 1;
             }
         }
         
         return ans;
     }
     
-    // Greedy helper to check if m balls can be placed with at least minDist apart
+   
     private boolean canPlace(int[] position, int m, int minDist) {
         int ballsPlaced = 1;
         int lastPos = position[0];
